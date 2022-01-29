@@ -1,17 +1,6 @@
 //@@viewOff:const
-//@@viewOff:const
-
-//@@viewOn:helpers
-
-/**
-   * Returns random number in range <min,max>
-   * 
-   * @param {number} min min value
-   * @param {number} max max value
-   * @return {number} random number
-  **/
 const MALE = 'male';
-const FEMALE = "female";
+const FEMALE = 'female';
 const MALE_NAMES = ['Václav', 'Miroslav', 'Petr', 'Michal', 'Jiří', 'Jaromír', 'Zdeněk', 'Tomáš', 'Adrian', 'Jan', 'Martin', 'Pavel', 'Robert',
   'Ryszard', 'Josef', 'Vladimír', 'Jaroslav', 'Karel', 'Vitalii', 'Arnošt', 'Roman', 'Ondřej', 'František', 'Luciano', 'Lukáš', 'Milan', 'Jakub',
   'Eduard', 'Adam', 'Antonín', 'Ladislav', 'David', 'Rudolf', 'Gerhard', 'Radim', 'Jozef', 'Stanislav', 'Ludvík', 'Vojtěch', 'Yurii', 'Jindřich',
@@ -29,7 +18,17 @@ const FEMALE_SURNAMES = ['Paličková', 'Mirgová', 'Opichalová', 'Kuřová', '
   'Müllerová', 'Nováková', 'Duchoňová', 'Duchoňová', 'Arnoštová', 'Dočkalová', 'Pilařová', 'Nečesaná', 'Šustková', 'Číhalová', 'Drahotská', 'Frýdlová', 'Tranová',
   'Žáková', 'Kováčová', 'Polášková', 'Leová', 'Valentová', 'Zamprová', 'Erbenová', 'Horáčková', 'Serbusová', 'Budilová', 'Janáčková', 'Táborská', 'Navrátilová'];
 const WORKLOAD = [10, 20, 30, 40];
+//@@viewOff:const
 
+//@@viewOn:helpers
+
+/**
+   * Returns random number in range <min,max>
+   * 
+   * @param {number} min min value
+   * @param {number} max max value
+   * @return {number} random number
+  **/
   function getRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);

@@ -3,7 +3,7 @@ const FEMALE = "female";
 
 const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
 
-function median(values){
+function median(values) {
     values.sort(function(a,b){
         return a-b;
     });
@@ -52,12 +52,12 @@ function getStats(data) {
                 break
         }
         stats.workload.push(obj.workload)
+
         if (obj.gender === FEMALE) {
             stats.workloadWomen.push(obj.workload)
         }
 
         stats.ages.push(getAge(obj.birthdate))
-
     });
 
     return stats

@@ -1,4 +1,6 @@
 //@@viewOff:const
+const MALE = 'male';
+const FEMALE = 'female';
 //@@viewOff:const
 
 //@@viewOn:helpers
@@ -10,25 +12,16 @@
  * @return {object} output data
 **/
 function getAge(currentDate, birthdate) {
-    var ageDifMs = currentDate - birthdate;
-    var ageDate = new Date(ageDifMs);
+    const ageDifMs = currentDate - birthdate;
+    const ageDate = new Date(ageDifMs);
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
-function getPieChart(data) {
+function getChart(data) {
     let chartData = [];
     for (const [key, value] of Object.entries(data)) {
-        item = {'label': key, 'value': value}
-        chartData.push(item)
-    }
-    return chartData
-}
-
-function getBarChart(data) {
-    let chartData = [];
-    for (const [key, value] of Object.entries(data)) {
-        item = {'label': key, 'value': value}
-        chartData.push(item)
+        let item = {'label': key, 'value': value};
+        chartData.push(item);
     }
     return chartData
 }
@@ -37,7 +30,7 @@ function getStackedBarChart(dataMale, dataFemale) {
     let chartData = [];
     let workload = ['10', '20', '30', '40'];
     workload.forEach((key) => {
-        item = {'label': key, 'valueMale': dataMale[key], 'valueFemale': dataFemale[key]};
+        let item = {'label': key, 'valueMale': dataMale[key], 'valueFemale': dataFemale[key]};
         chartData.push(item);
     })
     return chartData;
@@ -57,15 +50,15 @@ function main(dtoIn=[]) {
         let personBirth = new Date(obj.birthdate);
         let personAge = getAge(currentDate, personBirth);
 
-        if (obj.gender === 'male') {
+        if (obj.gender === MALE) {
             barChart[personAge] = (barChart[personAge] || 0) + 1;
             stackedBarChartMale[obj.workload] = (stackedBarChartMale[obj.workload] || 0) + 1;
-        } else if (obj.gender === 'female') {
+        } else if (obj.gender === FEMALE) {
             stackedBarChartFemale[obj.workload] = (stackedBarChartFemale[obj.workload] || 0) + 1;
         }
     });
-    charts.pieChart = getPieChart(pieChart);
-    charts.barChart = getBarChart(barChart);
+    charts.pieChart = getChart(pieChart);
+    charts.barChart = getChart(barChart);
     charts.stackedBarChart = getStackedBarChart(stackedBarChartMale, stackedBarChartFemale);
     return charts;
 }

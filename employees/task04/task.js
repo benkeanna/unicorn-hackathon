@@ -21,34 +21,34 @@ function getNames(data) {
 
     data.forEach((obj) => {
         if (FEMALE_NAMES.includes(obj.name)) {
-            names.female[obj.name] = (names.female[obj.name] || 0) + 1
+            names.female[obj.name] = (names.female[obj.name] || 0) + 1;
             if (obj.workload < 40) {
-                names.femalePartTime[obj.name] = (names.femalePartTime[obj.name] || 0) + 1
+                names.femalePartTime[obj.name] = (names.femalePartTime[obj.name] || 0) + 1;
             }
         } else if (MALE_NAMES.includes(obj.name)) {
-            names.male[obj.name] = (names.male[obj.name] || 0) + 1
+            names.male[obj.name] = (names.male[obj.name] || 0) + 1;
             if (obj.workload === 40) {
-                names.maleFullTime[obj.name] = (names.maleFullTime[obj.name] || 0) + 1
+                names.maleFullTime[obj.name] = (names.maleFullTime[obj.name] || 0) + 1;
             }
         }
-        names.all[obj.name] = (names.all[obj.name] || 0) + 1
+        names.all[obj.name] = (names.all[obj.name] || 0) + 1;
     });
-    return names
+    return names;
 }
 
 function getChartData(data) {
     let chartData = {}
 
     for (let dataKey in data) {
-        chartDataKey = data[dataKey]
-        items = []
+        let chartDataKey = data[dataKey];
+        let items = [];
         for (const [key, value] of Object.entries(chartDataKey)) {
-            item = {'label': key, 'value': value}
-            items.push(item)
+            let item = {'label': key, 'value': value};
+            items.push(item);
         }
-        chartData[dataKey] = items
+        chartData[dataKey] = items;
     }
-    return chartData
+    return chartData;
 }
 //@@viewOff:helpers
 
@@ -59,8 +59,8 @@ function getChartData(data) {
 **/
 function main(dtoIn=[]) {
     let namesData = {}
-    namesData.names = getNames(dtoIn)
-    namesData.chartData = getChartData(namesData.names)
-    return namesData
+    namesData.names = getNames(dtoIn);
+    namesData.chartData = getChartData(namesData.names);
+    return namesData;
 }
 //@@viewOff:main

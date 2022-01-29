@@ -3,8 +3,8 @@
 
 //@@viewOn:helpers
 function getAge(currentDate, birthdate) {
-    var ageDifMs = currentDate - birthdate;
-    var ageDate = new Date(ageDifMs);
+    const ageDifMs = currentDate - birthdate;
+    const ageDate = new Date(ageDifMs);
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 //@@viewOff:helpers
