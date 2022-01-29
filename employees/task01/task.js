@@ -33,7 +33,7 @@ const WORKLOAD = [10, 20, 30, 40];
   function getRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
 function getRandomBirthday(start, end) {
