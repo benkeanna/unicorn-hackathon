@@ -36,7 +36,7 @@ const WORKLOAD = [10, 20, 30, 40];
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-function getRandomBirthday(start, end) {
+function getRandomBirthdate(start, end) {
   let min = new Date();
   min.setFullYear( min.getFullYear() - end );
   let max = new Date();
@@ -108,7 +108,7 @@ function main(dtoIn=  {}) {
       person.surname = getRandomMaleSurname()
     }
 
-    person.birthday = getRandomBirthday(dtoIn.age.min, dtoIn.age.max)
+    person.birthdate = getRandomBirthdate(dtoIn.age.min, dtoIn.age.max)
     person.workload = getRandomWorkload()
 
     people.push(person)

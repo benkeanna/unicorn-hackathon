@@ -16,12 +16,11 @@ function getAge(currentDate, birthdate) {
 }
 
 function main(dtoIn=[]) {
-    let currentDate = new Date();
     let people = [];
-    let currentMonth = currentDate.getMonth();
+    let currentDate = new Date();
     for (let i = 0; i < dtoIn.length; i++) {
         let personBirth = new Date(dtoIn[i].birthdate);
-        if (currentMonth === personBirth.getMonth()) {
+        if (currentDate.getMonth() === personBirth.getMonth()) {
             let person = {};
             person.name = dtoIn[i].name;
             person.surname = dtoIn[i].surname;
