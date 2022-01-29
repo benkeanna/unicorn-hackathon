@@ -16,3 +16,4 @@ const FEMALE_SURNAMES = ['Paličková', 'Mirgová', 'Opichalová', 'Kuřová', '
 'Středová', 'Benešová', 'Braunerová', 'Foltinová', 'Bažantová', 'Ciupová', 'Kočová', 'Holešinská', 'Redzinová', 'Včeláková', 'Prokešová', 'Čepeláková', 'Šírková', 
 'Müllerová', 'Nováková', 'Duchoňová', 'Duchoňová', 'Arnoštová', 'Dočkalová', 'Pilařová', 'Nečesaná', 'Šustková', 'Číhalová', 'Drahotská', 'Frýdlová', 'Tranová', 
 'Žáková', 'Kováčová', 'Polášková', 'Leová', 'Valentová', 'Zamprová', 'Erbenová', 'Horáčková', 'Serbusová', 'Budilová', 'Janáčková', 'Táborská', 'Navrátilová'];
+const WORKLOAD = [10, 20, 30, 40];
