@@ -4,8 +4,6 @@ const FEMALE = "female";
 const average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
 
 function median(values){
-    if(values.length ===0) throw new Error("No inputs");
-
     values.sort(function(a,b){
         return a-b;
     });
