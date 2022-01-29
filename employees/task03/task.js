@@ -63,25 +63,3 @@ function main(dtoIn=[]) {
     return charts;
 }
 //@@viewOff:main
-
-/*{
-    "pieChart": [
-     {"label": "10","value": 2},
-     {"label": "20","value": 3},
-     {"label": "30","value": 5},
-     {"label": "40","value": 3},
-    ],
-    "barChart": [
-     {"label": "22","value": 1},
-     {"label": "25","value": 3},
-     {"label": "39","value": 2},
-     {"label": "40","value": 1},
-     {"label": "42","value": 1}
-    ],
-    "stackedBarChart": [
-     {"label": "10","valueMale": 1,"valueFemale": 1},
-     {"label": "20","valueMale": 2,"valueFemale": 1},
-     {"label": "30","valueMale": 2,"valueFemale": 3},
-     {"label": "40","valueMale": 1,"valueFemale": 2}
-    ]
-  }*/
