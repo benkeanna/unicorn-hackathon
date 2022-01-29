@@ -2,6 +2,11 @@
 //@@viewOff:const
 
 //@@viewOn:helpers
+function getAge(currentDate, birthdate) {
+    var ageDifMs = currentDate - birthdate;
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
 //@@viewOff:helpers
 
 //@@viewOn:main
@@ -9,11 +14,6 @@
  * @param {object} dtoIn input data
  * @return {object} output data
 **/
-function getAge(currentDate, birthdate) {
-    var ageDifMs = currentDate - birthdate;
-    var ageDate = new Date(ageDifMs);
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
-}
 
 function main(dtoIn=[]) {
     let people = [];
