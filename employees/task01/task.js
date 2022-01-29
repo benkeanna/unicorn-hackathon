@@ -2,7 +2,7 @@
 //@@viewOff:const
 
 //@@viewOn:helpers
-  const {FEMALE} = require("../helpers/helpers");
+const {FEMALE, MALE, FEMALE_NAMES, FEMALE_SURNAMES, MALE_NAMES, MALE_SURNAMES, WORKLOAD} = require("../helpers/helpers");
 
 /**
    * Returns random number in range <min,max>
@@ -26,27 +26,47 @@ function getRandomBirthday(start, end) {
 }
 
 function getRandomFemaleName() {
-  return 'femaleName'
+  if (FEMALE_NAMES == null){
+    return false;
+  } else {
+    return FEMALE_NAMES[getRandom(0, FEMALE_NAMES.length)];
+  }
 }
 
 function getRandomMaleName() {
- return 'maleName'
+  if (MALE_NAMES == null){
+    return false;
+  } else {
+    return MALE_NAMES[getRandom(0, MALE_NAMES.length)];
+  }
 }
 
 function getRandomFemaleSurname() {
-  return 'femaleSurname'
+  if (FEMALE_SURNAMES == null){
+    return false;
+  } else {
+    return FEMALE_SURNAMES[getRandom(0, FEMALE_SURNAMES.length)];
+  }
 }
 
 function getRandomMaleSurname() {
-  return 'maleSurname'
+  if (MALE_SURNAMES == null){
+    return false;
+  } else {
+    return MALE_SURNAMES[getRandom(0, MALE_SURNAMES.length)];
+  }
 }
 
 function getRandomWorkload() {
-    return 10
+    if (WORKLOAD == null){
+      return false;
+    } else {
+      return WORKLOAD[getRandom(0, WORKLOAD.length)];
+    }
 }
 
 function getRandomGender() {
-    return female
+    return [MALE, FEMALE][getRandom(0, 1)];
 }
 
 //@@viewOff:helpers
