@@ -2,7 +2,7 @@ const tools = require("../tools/tools")
 const path = require("path");
 
 const dtoIn = {
-  count: 5,
+  count: 50,
   age: {
     min: 18, 
     max: 55

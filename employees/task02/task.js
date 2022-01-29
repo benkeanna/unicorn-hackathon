@@ -10,5 +10,6 @@
  * @return {object} output data
 **/
 function main(dtoIn=[]) {
+    return dtoIn;
 }
 //@@viewOff:main

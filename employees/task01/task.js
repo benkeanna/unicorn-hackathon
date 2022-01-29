@@ -85,7 +85,7 @@ function getRandomWorkload() {
 }
 
 function getRandomGender() {
-    return [MALE, FEMALE][getRandom(0, 1)];
+    return [MALE, FEMALE][getRandom(0, 2)];
 }
 
 //@@viewOff:helpers
