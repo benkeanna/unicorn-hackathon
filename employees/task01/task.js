@@ -2,7 +2,9 @@
 //@@viewOff:const
 
 //@@viewOn:helpers
-  /**
+  const {FEMALE} = require("../helpers/helpers");
+
+/**
    * Returns random number in range <min,max>
    * 
    * @param {number} min min value
@@ -68,9 +70,7 @@ function main(dtoIn=  {}) {
   person.birthday = getRandomBirthday()
   person.workload = 10
 
-
-
-
+  return person
   return [
     {
       gender: "male",
