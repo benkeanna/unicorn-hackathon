@@ -76,36 +76,25 @@ function getRandomGender() {
  * @return {array} output data
 **/
 function main(dtoIn=  {}) {
-  const person = {};
+  let people = []
 
-  person.gender = getRandomGender()
-  if (person.gender === FEMALE) {
-    person.name = getRandomFemaleName()
-    person.surname = getRandomFemaleSurname()
-  } else {
-    person.name = getRandomMaleName()
-    person.surname = getRandomMaleName()
+  for (let i = 0; i < dtoIn.count; i++) {
+    let person = {};
+    person.gender = getRandomGender()
+    if (person.gender === FEMALE) {
+      person.name = getRandomFemaleName()
+      person.surname = getRandomFemaleSurname()
+    } else {
+      person.name = getRandomMaleName()
+      person.surname = getRandomMaleName()
+    }
+
+    person.birthday = getRandomBirthday(dtoIn.age.min, dtoIn.age.max)
+    person.workload = getRandomWorkload()
+
+    people.push(person)
   }
 
-  person.birthday = getRandomBirthday()
-  person.workload = 10
-
-  return person
-  return [
-    {
-      gender: "male",
-      birthdate: "1993-08-07T00:00:00.000Z",
-      name: "Vratislav",
-      surname: "Sýkora",
-      workload: 40
-    },
-    {
-      gender: "female",
-      birthdate: "2000-01-03T00:00:00.000Z",
-      name: "Jiřina",
-      surname: "Ptáčková",
-      workload: 20
-    }
-  ]
+  return people
 }
 //@@viewOff:main
